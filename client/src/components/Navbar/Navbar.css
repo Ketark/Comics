@@ -1,0 +1,31 @@
+header {
+    background-color: black;
+    height: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+nav {
+    height: 60px;
+    width: 400px;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    flex-basis: 90%;
+}
+
+a, .login {
+    margin: 0px 20px;
+    font-size: 18px;
+    font-weight: 500;
+    text-decoration: none;
+    color: white;
+}
+
+.login:hover {
+    cursor: pointer;
+  }
+
+.home {
+    width: 80px;
+}
