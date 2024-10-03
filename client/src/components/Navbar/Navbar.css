@@ -14,7 +14,7 @@ nav {
     flex-basis: 90%;
 }
 
-a, .login {
+a, .loginNav, .logout, .nickName {
     margin: 0px 20px;
     font-size: 18px;
     font-weight: 500;
@@ -22,7 +22,7 @@ a, .login {
     color: white;
 }
 
-.login:hover {
+.loginNav, .logout {
     cursor: pointer;
   }
 

@@ -1,17 +1,37 @@
-import React from "react";
-import { Link } from "react-router-dom";
+import React, { useContext } from "react";
+import { Link, useNavigate } from "react-router-dom";
 import "./Navbar.css";
+import { Context } from "../../context/context";
 
-export default function Navbar({  setActive } : {setActive: React.Dispatch<React.SetStateAction<boolean>>}) {
+export default function Navbar() {
+  const { user, setUser, setActive } = useContext(Context);
+  const navigate = useNavigate();
+
+  const logout = () => {
+    localStorage.removeItem("login");
+    setUser(null);
+    navigate("/");
+  };
+
   return (
     <header>
       <Link to="/">
         <img className="home" src="../../logo.svg" alt="logo" />
       </Link>
       <nav>
-        <Link to="/favorites">Избранное</Link>
-        <div className="login" onClick={() => setActive(true)}>Войти</div>
-        <Link to="/logout">Выйти</Link>
+        {user ? (
+          <>
+            <div className="nickName">{user}</div>
+            <Link to="/favorites">Favorites</Link>
+            <div className="logout" onClick={logout}>
+              Logout
+            </div>
+          </>
+        ) : (
+          <div className="loginNav" onClick={() => setActive(true)}>
+            Login
+          </div>
+        )}
       </nav>
     </header>
   );

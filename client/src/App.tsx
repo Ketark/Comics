@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React, { useContext, useEffect, useState } from "react";
 import { Route, Routes } from "react-router-dom";
 import "./App.css";
 import Navbar from "./components/Navbar/Navbar";
@@ -6,22 +6,22 @@ import HomePage from "./pages/HomePage/HomePage";
 import FavoritePage from "./pages/FavoritePage/FavoritePage";
 import ComicPage from "./pages/ComicPage/ComicPage";
 import Modal from "./components/Modal/Modal";
+import { Context } from "./context/context";
+import { ProtectedRoute } from "./middlewares/protectedRoute";
 
 function App() {
-  useEffect(() => {
-    if(!localStorage.getItem('login')) {
-      localStorage.setItem('login', 'no');
-    }
-  }, [])
-  const [active, setActive] = useState(false);
+  const { user, setActive } = useContext(Context);
+
   return (
     <>
-      <Navbar setActive={setActive} />
-      <Modal active={active} setActive={setActive} />
+      <Navbar />
+      <Modal />
       <Routes>
         <Route path="/" element={<HomePage />} />
-        <Route path="/favorites" element={<FavoritePage />} />
-        <Route path="/comics/:id" element={<ComicPage />} />
+        <Route element={<ProtectedRoute user={user} setActive={setActive} />}>
+          <Route path="/favorites" element={<FavoritePage />} />
+          <Route path="/comics/:id" element={<ComicPage />} />
+        </Route>
       </Routes>
     </>
   );
