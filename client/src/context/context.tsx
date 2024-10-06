@@ -6,6 +6,8 @@ export const Context = createContext<ContextValue>({
   setUser: () => {},
   active: false,
   setActive: () => {},
+  userList: "[]",
+  setUserList: () => {},
 });
 
 export const AppContext = ({ children }: { children: React.ReactNode }) => {
@@ -15,11 +17,17 @@ export const AppContext = ({ children }: { children: React.ReactNode }) => {
 
   const [active, setActive] = useState<boolean>(false);
 
+  const [userList, setUserList] = useState<string>(
+    localStorage.getItem("userList") || "[]"
+  );
+
   const contextValue = {
     user,
     setUser,
     active,
     setActive,
+    userList,
+    setUserList,
   };
 
   return <Context.Provider value={contextValue}>{children}</Context.Provider>;

@@ -9,7 +9,7 @@ export const comicAPI = createApi({
   endpoints: (build) => ({
     fetchAllComics: build.query<ComicsInfo, string>({
       query: () => ({
-        url: `/comics?apikey=${process.env.REACT_APP_APIKEY}&hash=${process.env.REACT_APP_HASH}&limit=10`,
+        url: `/comics?apikey=${process.env.REACT_APP_APIKEY}&hash=${process.env.REACT_APP_HASH}&limit=70`,
       }),
     }),
     fetchOneComics: build.query<ComicsInfo, string | undefined>({

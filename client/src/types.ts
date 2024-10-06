@@ -25,15 +25,27 @@ export interface ComicsInfo {
     results: ComicInfo[];
   };
 }
-
-export interface ContextValue  {
+export interface ContextValue {
   user: string | null;
   setUser: Dispatch<SetStateAction<string | null>>;
   active: boolean;
   setActive: Dispatch<SetStateAction<boolean>>;
-};
+  userList: string;
+  setUserList: Dispatch<SetStateAction<string>>;
+}
 
 export interface ProtectedRoutePropsType {
   user: string | null;
   setActive: Dispatch<SetStateAction<boolean>>;
+}
+
+export interface PaginationPropsType {
+  currentPage: number;
+  pages: number;
+}
+
+export interface userInfo {
+  login: string;
+  password: string;
+  favorites: string[];
 }

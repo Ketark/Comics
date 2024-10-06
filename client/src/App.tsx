@@ -11,6 +11,7 @@ import { ProtectedRoute } from "./middlewares/protectedRoute";
 
 function App() {
   const { user, setActive } = useContext(Context);
+  
 
   return (
     <>

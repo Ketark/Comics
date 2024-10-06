@@ -9,7 +9,7 @@ export default function Register() {
   });
   const [message, setMessage] = useState("");
 
-  const { setActive } = useContext(Context);
+  const { setActive, userList, setUserList } = useContext(Context);
 
   const changeInputs = (e: ChangeEvent<HTMLInputElement>): void => {
     setInputs((prev) => ({ ...prev, [e.target.name]: e.target.value }));
@@ -19,10 +19,6 @@ export default function Register() {
 
   const getLogin = (e: React.SyntheticEvent): void => {
     e.preventDefault();
-    let userList = localStorage.getItem("userList");
-    if (userList === null) {
-      userList = "[]";
-    }
 
     const userListParse = JSON.parse(userList);
 
@@ -40,9 +36,9 @@ export default function Register() {
     } else if (inputs.password1 !== inputs.password2) {
       setMessage("Пароли не соответствуют");
     } else {
-      userListParse.push({ login: inputs.login, password: inputs.password1 });
-      console.log(userListParse);
+      userListParse.push({ login: inputs.login, password: inputs.password1, favorites: [] });
       localStorage.userList = JSON.stringify(userListParse);
+      setUserList(JSON.stringify(userListParse));
       localStorage.login = inputs.login;
       setUser(inputs.login);
       setInputs({ login: "", password1: "", password2: "" });

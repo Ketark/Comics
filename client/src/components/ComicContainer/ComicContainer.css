@@ -1,37 +1,5 @@
 .comicsContainer {
   display: flex;
   flex-wrap: wrap;
-  justify-content: space-between;
-}
-
-.comic {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  margin: 10px;
-}
-
-.comic:hover {
-  cursor: pointer;
-}
-
-.poster {
-  border-radius: 30px;
-  width: 300px;
-}
-
-.title {
-  width: 300px;
-  text-align: center;
-  font-size: 18px;
-  font-weight: 500;
-  display: -webkit-box;
-  -webkit-line-clamp: 2;
-  line-clamp: 2;
-  -webkit-box-orient: vertical;
-  overflow: hidden;
-}
-
-.titleContainer {
-  height: 50px;
+  justify-content: flex-start;
 }

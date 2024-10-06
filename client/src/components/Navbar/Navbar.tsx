@@ -15,14 +15,14 @@ export default function Navbar() {
 
   return (
     <header>
-      <Link to="/">
-        <img className="home" src="../../logo.svg" alt="logo" />
+      <Link className="home" to="/">
+        <img className="homeLogo" src={process.env.PUBLIC_URL + "/logo.svg"} alt="logo" />
       </Link>
-      <nav>
+      <nav className="navbar">
         {user ? (
           <>
             <div className="nickName">{user}</div>
-            <Link to="/favorites">Favorites</Link>
+            <Link className="favorites" to="/favorites">Favorites</Link>
             <div className="logout" onClick={logout}>
               Logout
             </div>

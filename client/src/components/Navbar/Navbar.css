@@ -4,8 +4,12 @@ header {
     display: flex;
     align-items: center;
     justify-content: space-around;
+    position: fixed;
+    width: 100%;
+    top: 0px;
+    z-index: 2;
 }
-nav {
+.navbar {
     height: 60px;
     width: 400px;
     display: flex;
@@ -14,7 +18,7 @@ nav {
     flex-basis: 90%;
 }
 
-a, .loginNav, .logout, .nickName {
+.home, .favorites, .loginNav, .logout, .nickName {
     margin: 0px 20px;
     font-size: 18px;
     font-weight: 500;
@@ -26,6 +30,6 @@ a, .loginNav, .logout, .nickName {
     cursor: pointer;
   }
 
-.home {
+.homeLogo {
     width: 80px;
 }
