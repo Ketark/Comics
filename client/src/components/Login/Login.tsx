@@ -45,7 +45,7 @@ export default function Login() {
   return (
     <div className="login">
       <h2>Login</h2>
-      <form className="loginForm">
+      <form className="loginForm" onSubmit={getLogin}>
         <input
           className="loginInput"
           name="login"
@@ -63,7 +63,7 @@ export default function Login() {
           onChange={changeInputs}
         />
         <div className="errMsg">{message}</div>
-        <button className="loginButton" onClick={getLogin}>
+        <button className="loginButton" type="submit">
           Login
         </button>
       </form>

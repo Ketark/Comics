@@ -33,37 +33,39 @@
 }
 
 .info {
-    width: 90%;
+  width: 90%;
 }
 
 .info div {
-    margin: 0px 0px 10px 0px;
-    font-size: 18px;
-    font-weight: 700;
+  margin: 0px 0px 10px 0px;
+  font-size: 18px;
+  font-weight: 700;
 }
 
 .back {
-    margin-top: 30px;
-    font-size: 18px;
-    font-weight: 700;
+  margin-top: 30px;
+  font-size: 18px;
+  font-weight: 700;
 }
 
 .back:hover {
-    cursor: pointer;
-  }
+  cursor: pointer;
+}
 
-  .favoriteButton {
-    font-size: 18px;
-    border-radius: 12px;
-    border: solid bisque;
-    width: 150px;
-    height: 60px;
-    background-color: #333;
-    cursor: pointer;
-    transition: background-color 0.3s, color 0.3s;
-    color: white;
-  }
+.backButton,
+.favoriteButton {
+  font-size: 18px;
+  border-radius: 12px;
+  border: solid bisque;
+  width: 150px;
+  height: 60px;
+  background-color: #333;
+  cursor: pointer;
+  transition: background-color 0.3s, color 0.3s;
+  color: white;
+}
 
-  .favoriteButton:hover {
-    background-color: #ec6625;
-  }
+.backButton:hover,
+.favoriteButton:hover {
+  background-color: #ec6625;
+}

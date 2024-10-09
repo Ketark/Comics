@@ -31,9 +31,9 @@ export default function ComicPage() {
           {isFavorite ? "Remove from favorites" : "Add to favorites"}
         </button>
         <div className="info">
-          <div>Количество страниц: {comic?.pageCount || "не указано"}</div>
+          <div>Number of pages: {comic?.pageCount || "не указано"}</div>
           <div>
-            Персонажи:{" "}
+            Characters:{" "}
             {comic?.characters.items.length !== 0
               ? comic?.characters.items.map((character, index, arr) =>
                   index === arr.length - 1
@@ -43,7 +43,7 @@ export default function ComicPage() {
               : "не указаны"}
           </div>
           <div>
-            Создатели:{" "}
+            Creators:{" "}
             {comic?.creators.items.length !== 0
               ? comic?.creators.items.map((creator, index, arr) =>
                   index === arr.length - 1
@@ -53,13 +53,13 @@ export default function ComicPage() {
               : "не указаны"}
           </div>
           <div>
-            Описание:{" "}
+            Description:{" "}
             {comic?.textObjects[0]?.text.replace(/<br>/gi, "") || "не указано"}
           </div>
         </div>
-        <div className="back" onClick={() => navigate(-1)}>
-          Вернуться
-        </div>
+        <button className="backButton" onClick={() => navigate(-1)}>
+          Back
+        </button>
       </article>
     </article>
   );

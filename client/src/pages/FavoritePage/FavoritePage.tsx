@@ -10,7 +10,6 @@ export default function FavoritePage() {
     (el: userInfo) => el.login === user
   ).favorites;
   const userData: ComicInfo[] = [];
-  console.log(favorites);
   for (let i = 0; i < favorites.length; i++) {
     const { data } = comicAPI.useFetchOneComicsQuery(favorites[i]);
     if (data) {

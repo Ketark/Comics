@@ -49,7 +49,7 @@ export default function Register() {
   return (
     <div className="login">
       <h2>Register</h2>
-      <form className="loginForm">
+      <form className="loginForm" onSubmit={getLogin}>
         <input
           className="loginInput"
           name="login"
@@ -75,7 +75,7 @@ export default function Register() {
           onChange={changeInputs}
         />
         <div className="errMsg">{message}</div>
-        <button className="loginButton" onClick={getLogin}>
+        <button className="loginButton" type="submit">
           Register
         </button>
       </form>

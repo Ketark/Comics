@@ -49,3 +49,15 @@ export interface userInfo {
   password: string;
   favorites: string[];
 }
+
+export interface CharacterInfo {
+  id: number;
+  name: string;
+  comics: { available: number };
+}
+
+export interface CharactersInfo {
+  data: {
+    results: CharacterInfo[];
+  };
+}

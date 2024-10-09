@@ -1,0 +1,75 @@
+.filterComicsContainer {
+  display: flex;
+  justify-content: center;
+  padding: 20px 0px 30px 0px;
+}
+
+.characterContainer {
+  position: relative;
+}
+
+.searchInput {
+  padding: 5px 35px 5px 5px;
+  margin: 0px 10px;
+  border: 1px solid black;
+  border-radius: 5px;
+  font-size: 16px;
+  box-sizing: border-box;
+}
+
+.searchInputDate {
+  padding: 5px;
+  margin: 0px 10px;
+  border: 1px solid black;
+  border-radius: 5px;
+  font-size: 16px;
+}
+
+.dropdownListHome {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  width: 240px;
+  max-height: 200px;
+  overflow-y: auto;
+  border-radius: 8px;
+  padding: 0;
+  margin: 0px 10px;
+  background-color: #080808;
+}
+
+.dropdownItemHome {
+  cursor: pointer;
+  padding: 8px 16px;
+  color: white;
+}
+
+.description {
+  font-size: 18px;
+  font-weight: 500;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.buttonContainer {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 20px;
+}
+
+.filterButton {
+  font-size: 18px;
+  border-radius: 12px;
+  border: solid bisque;
+  width: 150px;
+  height: 60px;
+  background-color: #333;
+  cursor: pointer;
+  transition: background-color 0.3s, color 0.3s;
+  color: white;
+}
+
+.filterButton:hover {
+  background-color: #ec6625;
+}

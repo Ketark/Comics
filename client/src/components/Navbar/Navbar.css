@@ -1,35 +1,40 @@
 header {
-    background-color: black;
-    height: 60px;
-    display: flex;
-    align-items: center;
-    justify-content: space-around;
-    position: fixed;
-    width: 100%;
-    top: 0px;
-    z-index: 2;
+  background-color: black;
+  height: 60px;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  position: fixed;
+  width: 100%;
+  top: 0px;
+  z-index: 2;
 }
 .navbar {
-    height: 60px;
-    width: 400px;
-    display: flex;
-    align-items: center;
-    justify-content: flex-end;
-    flex-basis: 90%;
+  height: 60px;
+  width: 400px;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  flex-basis: 90%;
 }
 
-.home, .favorites, .loginNav, .logout, .nickName {
-    margin: 0px 20px;
-    font-size: 18px;
-    font-weight: 500;
-    text-decoration: none;
-    color: white;
+.home,
+.favorites,
+.loginNav,
+.logout,
+.nickName {
+  margin: 0px 20px;
+  font-size: 18px;
+  font-weight: 500;
+  text-decoration: none;
+  color: white;
 }
 
-.loginNav, .logout {
-    cursor: pointer;
-  }
+.loginNav,
+.logout {
+  cursor: pointer;
+}
 
 .homeLogo {
-    width: 80px;
+  width: 80px;
 }
