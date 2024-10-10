@@ -10,7 +10,7 @@ import { AppContext } from "./context/context";
 
 ReactDOM.createRoot(document.getElementById("root") as HTMLElement).render(
   <Provider store={store}>
-  <BrowserRouter basename="/Comics/">
+  <BrowserRouter basename="/Comics">
     <React.StrictMode>
       <AppContext>
         <App />

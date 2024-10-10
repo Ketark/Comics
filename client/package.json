@@ -1,6 +1,6 @@
 {
   "name": "client",
-  "homepage": "https://ketark.github.io/Comics/",
+  "homepage": "https://ketark.github.io/Comics",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
