@@ -4,7 +4,7 @@ import { CharactersInfo, ComicsInfo } from "../types";
 export const comicAPI = createApi({
   reducerPath: "comicAPI",
   baseQuery: fetchBaseQuery({
-    baseUrl: `http://gateway.marvel.com/v1/public/`,
+    baseUrl: `https://gateway.marvel.com/v1/public/`,
   }),
   endpoints: (build) => ({
     fetchAllComics: build.query<ComicsInfo, string>({
