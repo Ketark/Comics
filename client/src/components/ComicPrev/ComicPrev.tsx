@@ -1,4 +1,4 @@
-import React, { useContext } from "react";
+import React, { useContext, useEffect, useState } from "react";
 import { ComicInfo } from "../../types";
 import { useNavigate } from "react-router-dom";
 import { Context } from "../../context/context";
@@ -7,14 +7,16 @@ import "./ComicPrev.css";
 export default function ComicPrev({ comic }: { comic: ComicInfo }) {
   const navigate = useNavigate();
   const { user, setActive } = useContext(Context);
+  const [Loaded, setLoaded] = useState(false);
 
   return (
     <article
-      className="comic"
+      className={`comic ${Loaded ? "activeCom" : ""}`}
       id={`${comic.id}`}
       onClick={() => {
         user ? navigate(`/comics/${comic.id}`) : setActive(true);
       }}
+      onLoad={() => setLoaded(true)}
     >
       <div className="titleContainer">
         <div className="title">{comic.title}</div>

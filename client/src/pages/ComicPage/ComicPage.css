@@ -3,6 +3,12 @@
   display: flex;
   flex-direction: column;
   justify-content: center;
+  opacity: 0;
+  transition: opacity 1s ease-in-out;
+}
+
+.comicContainer.activeCom {
+  opacity: 1;
 }
 .oneComic {
   display: flex;
